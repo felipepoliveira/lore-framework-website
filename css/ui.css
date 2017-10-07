@@ -1,0 +1,64 @@
+@keyframes fx-rotate-360{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.bg-gray-super-light{
+    background-color: #f0f0f0;
+}
+.bg-purple-dark{
+    background-color: #511e5e;
+}
+
+.c-purple-light{
+    color: #d28ee3;
+}
+
+.lead{
+    font-size: 2rem;
+}
+
+.navbar{
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+/*The container*/
+#modulesCircle{
+    margin: 120px 0px;
+}
+
+ /*Circle of modules*/
+#modulesCircle img:nth-child(1){
+    height: 280px;
+    transform-origin: center;
+    position: absolute;
+    margin: -20px -40px;
+
+    animation: fx-rotate-360 20s linear 1s infinite;
+}
+
+/*Lore logo*/
+#modulesCircle img:nth-child(2){
+    height: 192px;
+}
+
+.nav-item > a{
+    color: #563a5e !important;
+}
+
+.nav-item.active > a{
+    color: #511e5e !important;
+
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    transition: color .2s;
+}
+
+.nav-item > a:hover{
+    color: #9337aa !important;
+}
