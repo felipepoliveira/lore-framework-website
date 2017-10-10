@@ -7,6 +7,19 @@
     }
 }
 
+@keyframes fx-soft-up-and-down{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(0.8);
+    }
+}
+
+body{
+    padding-bottom: 32px;
+}
+
 .bg-gray-super-light{
     background-color: #f0f0f0;
 }
@@ -16,6 +29,28 @@
 
 .c-purple-light{
     color: #d28ee3;
+}
+
+.card{
+    box-shadow: 0px 0px 0px black;
+    border: 4px solid #511e5e;
+    padding: 32px;
+
+    transition: box-shadow 2s ease-in;
+}
+
+.card:hover{
+    box-shadow: 0px 2px 3px black;
+}
+
+.hover-gray-scale > *{
+    filter: grayscale(100%);
+
+    transition: filter .4s;
+}
+
+.hover-gray-scale > *:hover{
+    filter: grayscale(0%);
 }
 
 .lead{
@@ -35,6 +70,7 @@
  /*Circle of modules*/
 #modulesCircle img:nth-child(1){
     height: 280px;
+    width: 280px;
     transform-origin: center;
     position: absolute;
     margin: -20px -40px;
@@ -45,6 +81,8 @@
 /*Lore logo*/
 #modulesCircle img:nth-child(2){
     height: 192px;
+
+    animation: fx-soft-up-and-down 10s alternate 1s infinite;
 }
 
 .nav-item > a{
